@@ -16,7 +16,7 @@ You can also chose the side of your tooltip by the attribute "data-tooltip-posit
 <h3>Example with top position tooltip</h3>
 	<button class="tooltip-trigger" data-tooltip-text="my tooltip text here" data-tooltip-position="top">trigger me !</button>
 
-<h3>Event parameter</h3>
+<h3>Event parameters</h3>
 <p>Now the event trigger have two options: "hover" and "click"</p>
 	$(".tooltip-trigger").tooltip({
 	     event: "hover" // is the default
