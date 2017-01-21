@@ -1,0 +1,147 @@
+button {
+	cursor: pointer; padding: 6px; position: relative;
+	border: none; outline: 0; background: #501a96; color: #fff;
+	box-shadow: 0 1px 3px rgba(50,50,50,.5);
+}
+
+
+.tooltip {
+	background: rgba(80,80,80,.9); color: #fff; z-index: 999999;
+	position: absolute; padding: 8px; max-width: 250px; border-radius: 2px;
+}
+
+/** Scale animation ****************/
+
+.tooltip.animation-scale {
+	-webkit-animation-name: scaleTooltip;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease;
+	animation-name: scaleTooltip;
+	animation-duration: .6s;
+	animation-timing-function: ease;
+}
+
+@-webkit-keyframes scaleTooltip {
+	from {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@keyframes scaleTooltip {
+	from {
+		-webkit-transform: scale(0);
+		transform: scale(0);
+	}
+	to {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+/**** Fade animation ****************/
+
+.tooltip.animation-fade {
+	-webkit-animation-name: fadeTooltip;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: ease;
+	animation-name: fadeTooltip;
+	animation-duration: .6s;
+	animation-timoutg-function: ease;
+}
+
+@-webkit-keyframes fadeTooltip {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeTooltip {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/****  Slide animation   *************/
+
+.tooltip.animation-slide {
+	-webkit-animation-name: slideTooltip;
+	-webkit-animation-duration: .6s;
+	-webkit-animation-timing-function: linear;
+	animation-name: slideTooltip;
+	animation-duration: .6s;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes slideTooltip {
+	from {
+		-webkit-transform: translateY(-20%);
+		transform: translateY(-20%);
+		opacity: 0.2;
+	}
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 0.2;
+	}
+}
+
+@keyframes slideTooltip {
+	from {
+		-webkit-transform: translateY(-20%);
+		transform: translateY(-20%);
+		opacity: 1;
+	}
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.tooltip .tooltip-arrow {
+	position: absolute;
+	border: 8px solid rgba(80,80,80,.9);
+}
+
+.tooltip-arrow.bottomtotop {
+	border-top-color: transparent; border-left-color: transparent;
+	border-right-color: transparent; top: -16px;
+}
+
+.tooltip-arrow.toptobottom {
+	border-bottom-color: transparent; border-left-color: transparent;
+	border-right-color: transparent; bottom: -16px;
+}
+
+.tooltip-arrow.righttoleft {
+	border-left-color: transparent; border-bottom-color: transparent;
+	border-top-color: transparent; left: -16px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.tooltip-arrow.lefttoright {
+	border-right-color: transparent; border-bottom-color: transparent;
+	border-top-color: transparent; right: -16px;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.tooltip-arrow.center {
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
